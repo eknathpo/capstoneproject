@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: eknathpokharkar/capstone-frontend:v13
+        image: eknathpokharkar/capstone-frontend:IMAGE_TAG
         ports:
         - containerPort: 3000   # ✅ Nginx serves on port 80
 

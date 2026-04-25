@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: order-service
-        image: eknathpokharkar/capstone-order-service:v1
+        image: eknathpokharkar/capstone-order-service:IMAGE_TAG
         ports:
         - containerPort: 5001
 ---

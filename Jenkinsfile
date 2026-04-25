@@ -13,6 +13,17 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/eknathpo/capstoneproject.git'
             }
         }
+stage('Docker Login') {
+    steps {
+        script {
+            withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+                sh '''
+                echo "$PASS" | docker login -u "$USER" --password-stdin
+                '''
+            }
+        }
+    }
+}
 
         stage('Build Docker Images') {
             steps {

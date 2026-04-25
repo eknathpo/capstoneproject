@@ -56,6 +56,8 @@ stage('Push Images') {
                 docker push $DOCKERHUB/product:$IMAGE_TAG
                 docker push $DOCKERHUB/order:$IMAGE_TAG
                 docker push $DOCKERHUB/inventory:$IMAGE_TAG
+                docker push $DOCKERHUB/frontend:$IMAGE_TAG
+                docker push $DOCKERHUB/mysql:$IMAGE_TAG
                 '''
             }
         }

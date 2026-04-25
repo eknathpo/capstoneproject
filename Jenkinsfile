@@ -1,7 +1,6 @@
 pipeline {
 agent any
 
-```
 environment {
     DOCKERHUB = "eknathpokharkar"
     IMAGE_TAG = "v${BUILD_NUMBER}"
@@ -46,7 +45,6 @@ stages {
         }
     }
 }
-```
 
 }
 
